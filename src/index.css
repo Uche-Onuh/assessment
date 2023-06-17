@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body,
+#root,
+.content {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* navbar */
+.selected {
+  font-weight: 900;
+  color: #ff0000;
+}
+
+.mobileSelected {
+  font-weight: 900;
+  color: #ff0000;
+}
+
+.button-one {
+  background: transparent;
+  border: 2px solid var(--button-color, black);
+  border-radius: 1px;
+  cursor: pointer;
+  --button-color: #333;
+}
+
+.button-one .line {
+  transition: rotate 300ms ease-in, y 300ms ease-in 300ms, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.button-one.opened .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+  fill: #ff0000;
+}
+
+.button-one.opened :is(.top, .bottom) {
+  y: 45;
+}
+
+.button-one.opened .top {
+  rotate: 45deg;
+}
+
+.button-one.opened .middle {
+  opacity: 0;
+}
+
+.button-one.opened .bottom {
+  rotate: -45deg;
 }
