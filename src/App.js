@@ -2,7 +2,7 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Box } from "@mui/material";
 
-import { Navbar, Footer } from "./components";
+import { Navbar, Footer, Hero, About } from "./components";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -15,7 +15,10 @@ function App() {
           <nav>
             <Navbar />
           </nav>
-
+          <main>
+            <Hero />
+            <About />
+          </main>
           <footer>
             <Footer />
           </footer>

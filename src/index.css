@@ -77,3 +77,17 @@ a {
 .button-one.opened .bottom {
   rotate: -45deg;
 }
+
+.hero{
+  height: 60vh;
+  background: url("../src/assets/smile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.overlay {
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
