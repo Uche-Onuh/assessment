@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  IconButton,
-  useTheme,
-  Typography,
-  Stack,
-} from "@mui/material";
+import { Box, IconButton, useTheme, Typography, Stack } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../theme";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
@@ -23,15 +17,13 @@ const Navbar = () => {
   const [mobileSelected, setMobileSelected] = useState("Home");
   const [data, setData] = useState(false);
   return (
-    <Box>
+    <Box >
       {/* fullscreen navbar */}
       <Box
         display="flex"
         justifyContent="space-between"
         p="10px 50px"
         alignItems="center"
-        // width="80%"
-        // margin="0 auto"
         sx={{
           [theme.breakpoints.down("md")]: {
             display: "none",
@@ -61,13 +53,13 @@ const Navbar = () => {
                   },
                 }}
               >
-                <Link
-                  to={link.to}
+                <a
+                  href={link.to}
                   className={isSelected === link.title ? "selected" : ""}
                   onClick={() => setIsSelected(link.title)}
                 >
                   {link.title}
-                </Link>
+                </a>
               </Typography>
             ))}
           </Box>
@@ -99,7 +91,7 @@ const Navbar = () => {
         {/* logo */}
         <Box width="90px" height="90px">
           <Link to="/">
-          <img src={logo} alt="logo" width="100%" height="100%" />
+            <img src={logo} alt="logo" width="100%" height="100%" />
           </Link>
         </Box>
         <Box>
@@ -161,14 +153,14 @@ const Navbar = () => {
             width: "100%",
             padding: "15px 20px",
             opacity: data === true ? "1" : "0",
-            top: "10%",
+            top: "15%",
             left: "0",
             transition: "height 1s ease, opacity 1s ease",
             [theme.breakpoints.up("md")]: {
               display: "none",
             },
           }}
-          height={data === true ? "25%" : "0"}
+          height={data === true ? "40%" : "0"}
         >
           <Stack direction="column" spacing="30px" alignItems="left">
             {navLinks.map((link) => (
