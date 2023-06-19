@@ -31,6 +31,7 @@ const GalleryComponent = () => {
         sx={{
           [theme.breakpoints.down("md")]: {
             width: "90%",
+            mx: "auto",
           },
         }}
       >
@@ -41,7 +42,6 @@ const GalleryComponent = () => {
           enableImageSelection={false}
         />
         {!!currentImage && (
-          /* @ts-ignore */
           <Lightbox
             mainSrc={currentImage.original}
             imageTitle={currentImage.caption}
