@@ -1,12 +1,12 @@
 import React from "react";
-import { Box, useTheme, Stack, Button, Typography } from "@mui/material";
+import { Box, useTheme, Stack, Typography } from "@mui/material";
 import { tokens } from "../theme";
 
 const Hero = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box className="hero" position="relative">
+    <Box className="hero" position="relative" id="hero">
       <div className="overlay"></div>
       <Stack
         maxWidth="50%"
