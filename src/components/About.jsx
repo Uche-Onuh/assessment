@@ -9,14 +9,14 @@ const About = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box padding="70px 0" id="hobbies">
+    <Box padding="70px 0 30px" id="hobbies">
       <Box
         width="80%"
         margin="0 auto"
         pb="80px"
         sx={{
           [theme.breakpoints.down("md")]: {
-            width: "90%",
+            width: "100%",
             mx: "auto", 
           },
         }}
@@ -31,7 +31,7 @@ const About = () => {
 
         <Box
           display="flex"
-          alignItems="center"
+          alignItems="stretch"
           flexWrap="wrap"
           gap="30px"
           justifyContent="space-around"
@@ -39,6 +39,7 @@ const About = () => {
             [theme.breakpoints.down("md")]: {
               flexDirection: "column",
               maxWidth: "90%",
+              margin: "auto",
             },
           }}
         >
@@ -61,7 +62,7 @@ const About = () => {
               key={hobby.id}
             >
               <img src={hobby.image} alt="bid" width="100%" height="250px" />
-              <Box padding="10px 20px 20px">
+              <Box padding="10px 20px">
                 <Typography variant="h4" my="20px" fontWeight="600">
                   {hobby.title}
                 </Typography>

@@ -2,7 +2,14 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Box } from "@mui/material";
 
-import { Navbar, Footer, Hero, About } from "./components";
+import {
+  Navbar,
+  Footer,
+  Hero,
+  About,
+  Contact,
+  GalleryComponent,
+} from "./components";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -18,6 +25,8 @@ function App() {
           <main>
             <Hero />
             <About />
+            <GalleryComponent />
+            <Contact />
           </main>
           <footer>
             <Footer />
